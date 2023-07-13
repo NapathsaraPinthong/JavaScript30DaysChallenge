@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <script type="text/javascript" src="./cornify.js"></script>
+    <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+
+<body>
+    <script>
+        const passed = [];
+        const secretCode = 'webos';
+
+        window.addEventListener('keyup', (e) => {
+            passed.push(e.key);
+            if (passed.length > secretCode.length) {
+                passed.shift();
+            }
+            if (passed.join("").includes(secretCode)) {
+                cornify_add();
+            }
+            console.log(passed);
+        })
+    </script>
+</body>
+
+</html>
